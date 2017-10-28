@@ -1,0 +1,20 @@
+<div class="tax-container">
+
+	<div class="taxes">
+
+		<div class="taxes-gross">After Taxes: {{ netIncome | currency: '$' : '0' }}</div>
+		<div class="taxes-paid">{{ taxesPaid | currency: '$' : '0' }} in taxes</div>
+
+		<div class="taxes-why">Here's why:</div>
+
+		<p class="taxes-bracket" ng-if="taxBracket > 0">15% on the first $45,916 of taxable income</p>
+		<p class="taxes-bracket" ng-if="taxBracket > 1">20.5% on the next $45,915 ($45,916 - $91,831)</p>
+		<p class="taxes-bracket" ng-if="taxBracket > 2">26% on the next $50,522 ($91,831 - $142,353)</p>
+		<p class="taxes-bracket" ng-if="taxBracket > 3">29% on the next $60,447 ($142,353 - $202,800)</p>
+		<p class="taxes-bracket" ng-if="taxBracket > 4">33% of taxable income over $202,800.</p>
+
+		<p class="taxes-bracket">4.95% for CPP</p>
+
+	</div>
+
+</div>

@@ -1,0 +1,53 @@
+// _hero-container.sass
+@import ../base/colors
+
+.hero
+	&-container
+		background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%)
+		padding: 25px 10px
+		text-align: center
+		color: white
+
+	&-pun
+		font-size: 3rem
+
+	&-blurb
+		margin-top: 15px
+		font-size: 1.3rem
+
+	&-btn
+		display: block
+		margin: 50px auto 0 auto
+		width: 200px
+		font-size: 1.2rem
+		background: $navy
+		color: white
+		transition: .3s
+
+		&:active
+			background: darken($navy, 10%)
+
+		&:hover
+			background: lighten($navy, 3%)
+			box-shadow: 0px 1px 8px -3px black
+
+.piggy-bank
+
+	&-container
+		text-align: center
+		margin-top: 100px
+
+	&-icon
+		width: 300px
+		opacity: .8
+		filter: grayscale(.5) drop-shadow(0 1px 2px gray)
+
+/* Large Phones */
+@media screen and (max-width: $mobile-lg)
+	.hero-pun
+		font-size: 2.5rem
+
+/* Medium Phones */
+@media screen and (max-width: $mobile-md)
+	.header-logo
+		display: none

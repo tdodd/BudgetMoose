@@ -1,0 +1,6 @@
+# 3rd party libraries
+/node_modules
+
+# Compiled output
+/build
+

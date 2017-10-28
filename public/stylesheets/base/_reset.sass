@@ -1,0 +1,27 @@
+// _reset.sass sets base element styles and app font
+@import colors
+
+$app-font: 'Roboto', sans-serif
+$root-font-size: 16px
+
+*,
+*::before,
+*::after
+	box-sizing: border-box
+
+body
+	margin: 0
+	padding-bottom: 150px
+	background: $bg-color
+	font-family: $app-font
+	font-size: $root-font-size
+
+ul
+	padding: 0
+	list-style: none
+
+a
+	text-decoration: none
+
+input:focus
+	outline-color: $teal

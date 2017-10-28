@@ -1,0 +1,39 @@
+<div class="bugdet-container">
+
+	<div class="budget">
+
+		<div class="budget-header">
+			<span>Budget:</span>
+			<span>{{ netIncome | currency: '$' : '0' }} a month</span>
+		</div>
+
+		<div class="budget-savings">
+			<span>Monthly Savings:</span>
+			<span ng-class="{ error: savings < 0 } ">{{ savings | currency: '$' : '0' }}</span>
+		</div>
+
+	</div>
+
+	<form class="expense" ng-submit="addExpense(expenseName, expenseValue); expenseName=null; expenseValue=null;">
+		<div class="expense-add">Add an expense:</div>
+		<input type="text" ng-model="expenseName" class="expense-input expense-name" placeholder="Name">
+		<input type="text" ng-model="expenseValue" class="expense-input expense-value" placeholder="Cost">
+		<input type="submit" value="Add" class="btn btn-success expense-btn">
+	</form>
+
+	<div ng-repeat="expense in expenses" class="expense-item">
+
+		<div class="expense-name">
+			 {{ expense.name }}
+		</div>
+
+		<div class="expense">
+			 {{ expense.value | currency: '$' : '0' }}
+		</div>
+
+	</div>
+
+	<!-- Invalid Expense Error Message -->
+	<div class="budget-error" ng-class="{ toast: invalidExpense, hidden: !invalidExpense }">Invalid Expense</div>
+
+</div>

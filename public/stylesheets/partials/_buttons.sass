@@ -1,0 +1,27 @@
+// _buttons.sass contains styles for reusable buttons
+@import ../base/colors
+
+.btn
+	border-radius: 50px
+	padding: .8rem 2rem
+	text-transform: uppercase
+	text-align: center
+	border: none
+	font-size: 1.1rem
+
+	&:hover
+		cursor: pointer
+
+	&:focus,
+	&:active
+		outline: none
+
+	&-success
+		background: $success-color
+		color: white
+
+		&:hover
+			background: lighten($success-color, 4%)
+
+		&:active
+			background: darken($success-color, 4%)

@@ -1,0 +1,21 @@
+// _toast.sass contains toast animations
+
+.toast
+	animation: toast .5s ease
+	animation-fill-mode: forwards
+
+@keyframes toast
+	from
+		bottom: -50px
+	to
+		bottom: 40px
+
+.toast-out
+	animation: toast-out .5s ease
+	animation-fill-mode: forwards
+
+@keyframes toast-out
+	from
+		bottom: 40px
+	to
+		bottom: -50px

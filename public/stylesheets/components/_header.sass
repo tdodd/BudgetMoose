@@ -1,0 +1,32 @@
+// _header.sass contains all styles for the header
+@import ../base/variables
+@import ../base/colors
+
+$header-height: 75px
+
+.header
+	position: relative
+	height: $header-height
+	background: white
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.4)
+
+	&-top-bar
+		background: linear-gradient(to right, $beige, $teal, $navy, $teal, $beige)
+		height: 4px
+
+	&-logo
+		height: $header-height
+		width: $header-height
+
+	&-title
+		display: inline-block
+		vertical-align: top
+		line-height: $header-height
+		font-size: 2.5rem
+		font-weight: 300
+		margin-left: 25px
+
+/* Mobile Styles */
+@media screen and (max-width: $mobile-lg)
+	.header-title
+		// font-size: 1.5rem

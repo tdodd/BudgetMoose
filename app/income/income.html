@@ -1,0 +1,27 @@
+<div class="container income-container">
+
+	<div class="salary">
+
+		<label for="salary" class="salary-label">Annual Income</label>
+
+		<div class="salary-input-container">
+			<span class="salary-dollar">$</span>
+			<input type="text"
+				name="salary"
+				ng-model="salary"
+				ng-change="calcIncome(salary)"
+				class="salary-input"
+				autocomplete="off"
+				maxlength="6"
+				placeholder="0">
+		</div>
+
+	</div>
+
+	<!-- Tax Component -->
+	<tax net-income="netIncome" taxes-paid="taxesPaid" tax-bracket="taxBracket"></tax>
+
+	<!-- Budget Component -->
+	<budget net-income="netIncome"></budget>
+
+</div>
